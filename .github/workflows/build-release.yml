@@ -20,8 +20,8 @@ permissions:
 
 env:
   RELEASE: 24.10.4
-  TARGET: x86
-  SUBTARGET: 64
+  TARGET: armsr
+  SUBTARGET: armv8
   PKG_DIR_NAME: luci-app-adguardhome
 
 jobs:
