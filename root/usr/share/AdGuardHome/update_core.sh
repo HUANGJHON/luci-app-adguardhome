@@ -100,8 +100,8 @@ UPX_Compress(){
 	fi
 	if ! command -v xz >/dev/null 2>&1; then
 		echo "xz not found, attempting to install..." >&2
-		opkg update >/dev/null 2>&1 || true
-		opkg install xz >/dev/null 2>&1 || { echo "软件包 xz 安装失败!" >&2; EXIT 1; }
+		apk update >/dev/null 2>&1 || true
+		apk add xz >/dev/null 2>&1 || { echo "软件包 xz 安装失败!" >&2; EXIT 1; }
 	fi
 	mkdir -p /tmp/upx-${upx_latest_ver}-${Arch_upx}_linux
 	echo -e "正在解压 ${upx_name} ...\n" 
